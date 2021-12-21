@@ -318,12 +318,6 @@ body {
   padding-top: 0;
 }
 
-@media (min-width: 1200px) {
-  .activity {
-    display: none;
-  }
-}
-
 .activity__title {
   margin: 0;
   margin-bottom: 50px;
@@ -376,6 +370,12 @@ body {
   margin: 0;
   padding-top: 27px;
   padding-bottom: 27px;
+}
+
+@media screen and (max-width: 1199px) {
+  .activity {
+    display: none;
+  }
 }
 
 /* Секция клиенты */

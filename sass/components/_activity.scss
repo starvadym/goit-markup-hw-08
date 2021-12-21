@@ -4,12 +4,6 @@
   margin: 0 auto;
   padding-top: 0;
 
-  @media screen and (max-width: 1199px) {
-    & {
-      display: none;
-    }
-  }
-
   &__title {
     margin: 0;
     margin-bottom: 50px;
@@ -66,4 +60,10 @@
   margin: 0;
   padding-top: 27px;
   padding-bottom: 27px;
+}
+
+@media screen and (max-width: 1199px) {
+  .activity {
+    display: none;
+  }
 }
