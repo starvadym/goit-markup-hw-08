@@ -67,7 +67,15 @@
     margin-left: 88px;
     margin-right: 84px;
     padding: 0;
+
+    /* Стили ссылок при наведении */
+    & .nav__link:hover,
+    & .nav__link:focus {
+      color: $static-color;
+      text-decoration: none;
+    }
   }
+
   .wrap-container {
     display: flex;
     align-items: center;

@@ -4,7 +4,7 @@
   margin: 0 auto;
   padding-top: 0;
 
-  @media screen and (max-width: 1199px) {
+  @include mq(desktop) {
     & {
       display: none;
     }
