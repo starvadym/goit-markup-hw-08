@@ -282,7 +282,7 @@ body {
   color: #757575;
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .advantages-list {
     display: flex;
     flex-wrap: wrap;
@@ -296,7 +296,7 @@ body {
   /* Стили текста заголовков и абзацев */
 }
 
-@media screen and (min-width: 1200px) {
+@media (min-width: 1200px) {
   .advantages-list {
     flex-wrap: nowrap;
   }
@@ -430,7 +430,7 @@ body {
   cursor: pointer;
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .clients-list {
     list-style: none;
     display: flex;
@@ -464,7 +464,7 @@ body {
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media (min-width: 1200px) {
   .clients__title {
     margin: 0;
     font-style: normal;
@@ -582,7 +582,7 @@ body {
   justify-content: center;
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .team-list {
     display: flex;
     flex-wrap: wrap;
@@ -610,7 +610,7 @@ body {
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media (min-width: 1200px) {
   .team-list {
     display: flex;
     flex-wrap: nowrap;

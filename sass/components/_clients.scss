@@ -50,7 +50,7 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@include mq(tablet) {
   .clients-list {
     list-style: none;
     display: flex;
@@ -87,7 +87,7 @@
     }
   }
 }
-@media screen and (min-width: 1200px) {
+@include mq(desktop) {
   .clients__title {
     margin: 0;
     font-style: normal;
