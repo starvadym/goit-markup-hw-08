@@ -1,0 +1,28 @@
+// Переменные и конструкции
+
+@import "./utils/mixins";
+@import "./utils/variables";
+@import "./utils/initial_styles";
+@import "./utils/_social-list";
+
+// Studio page
+
+@import "./components/slogan";
+@import "./components/advantages";
+@import "./components/activity";
+@import "./components/clients";
+@import "./components/studio-team";
+
+// Portfolio page
+
+@import "./components/projects";
+
+// Common content
+
+@import "./components/page-header";
+@import "./components/page-footer";
+
+// Modal & Menu window
+
+@import "./components/modal";
+@import "./components/menu";

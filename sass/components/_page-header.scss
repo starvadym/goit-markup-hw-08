@@ -1,0 +1,253 @@
+.page-header {
+  margin: 0 auto;
+  background-color: $primary-white-color;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: #ececec;
+}
+
+/* Вспомогательная обводка границ блока */
+
+/* Меню навигации */
+/* Базовый стиль ссылок */
+/* Расширение границ */
+
+.nav__link {
+  display: inline-block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  /* Оформление текста */
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.143;
+  letter-spacing: 0.02em;
+  color: $primary-text-color;
+  transition: color $transition-time $transition-function;
+  text-decoration: none;
+}
+// 480 px Design
+// Скрытие меню навигации
+
+@include mq(mobile-only) {
+  .nav,
+  .contacts-list {
+    display: none;
+  }
+}
+
+.logo-link--header {
+  display: block;
+  padding-top: 16px;
+  padding-bottom: 16px;
+
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 700;
+  // font-size: 26px;
+  // line-height: 1.192;
+  font-size: 24px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  color: #000000;
+  text-decoration: none;
+}
+.logoweb {
+  color: $static-color;
+}
+@include mq(tablet) {
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+    list-style: none;
+    justify-content: center;
+    flex-grow: 1;
+    margin: 0;
+    margin-left: 88px;
+    margin-right: 84px;
+    padding: 0;
+  }
+  .wrap-container {
+    display: flex;
+    align-items: center;
+  }
+  .envelope {
+    margin-right: 8px;
+  }
+  .smartphone {
+    margin-right: 8px;
+  }
+  .contacts-list .contacts-list__item:first-child {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+  .contacts-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .contacts-list__link {
+    display: flex;
+    align-items: center;
+
+    /* Оформление текста */
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+    color: $secondary-text-color;
+    transition: color $transition-time $transition-function;
+    text-decoration: none;
+  }
+}
+/* Применение свойств flex контейнера */
+
+@include mq(desktop) {
+  .nav {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    margin-left: 93px;
+
+    /* Стили ссылок при наведении */
+    & .nav__link:hover,
+    & .nav__link:focus {
+      color: $static-color;
+      text-decoration: none;
+    }
+  }
+  .logo-link--header {
+    font-size: 26px;
+    line-height: 1.192;
+  }
+
+  .contacts-list {
+    display: flex;
+  }
+
+  .contacts-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    /* Удаление зазора у крайнего элемента */
+
+    & .contacts-list__item:not(:last-child) {
+      margin-right: 30px;
+      margin-bottom: 0;
+    }
+
+    /*Окончательное позиционирование ссылок контактов */
+
+    & .contacts-list__item:first-child {
+      margin-left: 305px;
+    }
+
+    &__item:hover .envelope {
+      fill: $accent-color;
+    }
+    &__item:hover .smartphone {
+      fill: $accent-color;
+    }
+    &__item:hover .contacts-list__link {
+      color: $accent-color;
+    }
+    &__link:focus .envelope {
+      fill: $accent-color;
+    }
+    &__link:focus .smartphone {
+      fill: $accent-color;
+    }
+    &__link:focus {
+      color: $accent-color;
+    }
+  }
+}
+@include mq(desktop) {
+  .wrap-container {
+    display: flex;
+    align-items: center;
+  }
+
+  .envelope {
+    display: block;
+    fill: $secondary-text-color;
+    width: 16px;
+    height: 12px;
+    margin-right: 10px;
+    transition: fill $transition-time $transition-function;
+  }
+
+  .smartphone {
+    display: block;
+    fill: $secondary-text-color;
+    width: 10px;
+    height: 16px;
+    margin-right: 10px;
+    transition: fill $transition-time $transition-function;
+  }
+  .contacts-list__link {
+    display: flex;
+    align-items: center;
+
+    /* Оформление текста */
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.143;
+    letter-spacing: 0.02em;
+    color: $secondary-text-color;
+    transition: color $transition-time $transition-function;
+    text-decoration: none;
+  }
+}
+
+/* Удаление зазора у крайнего элемента*/
+
+.nav .nav__item + .nav__item {
+  margin-left: 50px;
+}
+
+/* Подсветка ссылки текущей страницы */
+
+.nav__link.primary {
+  color: $static-color;
+  text-decoration: none;
+}
+/* Подчеркивание текущей страницы */
+
+.primary::after {
+  content: "";
+  width: 48px;
+  height: 4px;
+  border-radius: 2px;
+  border-top-width: 4px;
+  border-top-style: solid;
+  border-top-color: $static-color;
+  position: absolute;
+  top: 76px;
+  margin-left: -48px;
+}
+
+.primary.portfolio::after {
+  content: "";
+  width: 78px;
+  height: 4px;
+  border-radius: 2px;
+  border-top-width: 4px;
+  border-top-style: solid;
+  border-top-color: $static-color;
+  position: absolute;
+  top: 76px;
+  margin-left: -78px;
+}
+
+.nav__link.secondary {
+  color: $primary-text-color;
+  text-decoration: none;
+}

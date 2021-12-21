@@ -1,0 +1,35 @@
+/* Выравнивание списка кнопок соцсетей */
+
+.social-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+}
+/* Очистка крайнего левого отсупа */
+.social-list .social-list__item + .social-list__item {
+  margin-left: 10px;
+}
+
+/* Стили ссылок соцсетей */
+
+.social-list__link {
+  display: block;
+  padding: 12px;
+  margin: 0;
+  border: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: $primary-white-color;
+  fill: $logo-color;
+  transition: fill $transition-time $transition-function,
+    background $transition-time $transition-function;
+
+  &:hover,
+  &:focus {
+    border-radius: 50%;
+    background: #2196f3;
+    fill: $primary-white-color;
+    cursor: pointer;
+  }
+}

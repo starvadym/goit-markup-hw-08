@@ -1,0 +1,324 @@
+/* Оформление бэкдропа и модального окна */
+
+.backdrop {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  transition: opacity $transition-time $transition-function;
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* Начальное состояние модального окна */
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0.2);
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  padding-top: 40px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 40px;
+
+  background: #fff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+
+  /* Появление и скрытие модального окна анимировано при помощи перехода с произвольным эффектом */
+
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform $transition-time $transition-function;
+}
+
+/* Стили и позиционирование кнопки закрытия модального окна */
+
+.button-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: $primary-white-color;
+  cursor: pointer;
+
+  &:hover &__icon {
+    fill: $static-color;
+  }
+
+  &:focus &__icon {
+    fill: $static-color;
+  }
+}
+
+.button-close__icon {
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.feedback-slogan {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 1.5;
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin: 0;
+  margin-bottom: 12px;
+
+  color: $primary-text-color;
+}
+
+/* Стили форм */
+
+/* Общая форма с полями */
+
+.feedback-container {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.feedback-container.last {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+/* Названия полей форм */
+
+.feedback__label--last {
+  margin-bottom: 20px;
+}
+
+/*Стили полей для имени, почты и телефона  */
+
+.feedback__input {
+  padding: 0;
+  margin: 0;
+
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+  transition: border $transition-time $transition-function;
+
+  &:hover ~ .feedback__icon1 {
+    fill: $static-color;
+    cursor: pointer;
+  }
+
+  &:focus ~ .feedback__icon1 {
+    fill: $static-color;
+  }
+
+  &:hover {
+    border: 1px solid $static-color;
+    cursor: pointer;
+  }
+  &:hover {
+    border: 1px solid $static-color;
+  }
+}
+
+/* Поле для комментариев */
+
+.feedback__input--textarea {
+  height: 120px;
+  padding: 12px 16px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+  resize: none;
+  color: rgba(117, 117, 117, 0.5);
+  display: block;
+  margin-bottom: 20px;
+}
+
+/* Стили надписи полей*/
+
+.feedback__label {
+  display: block;
+  margin-bottom: 4px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 1.17;
+
+  letter-spacing: 0.01em;
+
+  color: $secondary-text-color;
+}
+
+/* Стили ссылки */
+
+.feedback__link {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  // font-size: 14px;
+  // line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: $static-color;
+}
+
+/* Стили надписи в футере
+Соглашаюсь с рассылкой */
+
+.feedback__label--check {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+
+  letter-spacing: 0.03em;
+
+  color: $secondary-text-color;
+
+  text-decoration: none;
+}
+
+/* Иконки для полей форм*/
+
+.feedback__icon1 {
+  position: absolute;
+  top: 11px;
+  left: 12px;
+  fill: $initial-logo-color;
+  transition: fill $transition-time $transition-function;
+
+  .feedback__input:hover ~ & {
+    fill: $hover-icon-color;
+    cursor: pointer;
+  }
+  .feedback__input:focus {
+    border: 1px solid $hover-icon-color;
+  }
+}
+/* Стиль иконки в кнопке футера */
+
+.icon2 {
+  fill: $primary-white-color;
+  margin-left: 10px;
+}
+
+/* Согласие с условиями рассылки */
+
+.feedback__label--check {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-bottom: 30px;
+}
+/* Стиль для чекбокса */
+
+.feedback__icon {
+  display: block;
+  width: 15px;
+  height: 15px;
+  border: 2px solid #2a2a2a;
+  border-radius: 2px;
+  background-color: $primary-white-color;
+  transition: border $transition-time $transition-function,
+    background-color $transition-time $transition-function;
+
+  .feedback__checkbox:checked + .feedback__label--check & {
+    background-color: $hover-icon-color;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='13' height='10' viewBox='0 0 13 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.95703 4.75166L1.88825 4.68604L1.81923 4.75141L0.93123 5.59258L0.854858 5.66492L0.930974 5.73753L4.42671 9.07236L4.49574 9.1382L4.56476 9.07236L12.069 1.91352L12.1449 1.84116L12.069 1.76881L11.1873 0.927644L11.1183 0.861826L11.0493 0.927611L4.49577 7.17353L1.95703 4.75166Z' fill='%23fff' stroke='%23fff' stroke-width='0.2' /%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-origin: border-box;
+    border: 2px solid transparent;
+  }
+}
+/* Стиль для кнопки отправки формы */
+
+.feedback__button--modal {
+  display: block;
+  margin: 0 auto;
+  width: 200px;
+  height: 50px;
+
+  align-items: center;
+  text-align: center;
+
+  background: $static-color;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: none;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  color: $primary-white-color;
+  cursor: pointer;
+}
+
+@include mq(mobile) {
+  .modal {
+    height: 609px;
+    width: 450px;
+  }
+  .feedback__input {
+    width: 370px;
+  }
+  .feedback__label--check,
+  .feedback__link {
+    font-size: 12px;
+    line-height: 1.17;
+  }
+}
+
+@include mq(tablet) {
+  .modal {
+    height: 609px;
+    width: 450px;
+  }
+  .feedback__input {
+    width: 370px;
+  }
+  .feedback__label--check,
+  .feedback__link {
+    font-size: 12px;
+    line-height: 1.17;
+  }
+}
+@include mq(desktop) {
+  .modal {
+    height: 581px;
+    width: 528px;
+  }
+  .feedback__input {
+    width: 448px;
+  }
+  .feedback__label--check,
+  .feedback__link {
+    font-size: 14px;
+    line-height: 1.71;
+  }
+}
