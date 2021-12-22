@@ -304,11 +304,8 @@ body {
   .advantages-list {
     flex-wrap: nowrap;
   }
-  __item {
+  .advantages-list__item {
     width: 270px;
-    margin-bottom: 30px;
-  }
-  __item:last-child {
     margin-bottom: 0;
   }
   .advantages-list__item + .advantages-list__item {
@@ -612,6 +609,8 @@ body {
     padding-bottom: 30px;
   }
   .team__title {
+    font-size: 36px;
+    line-height: 1.167;
     margin-bottom: 50px;
   }
   .team-list__item {
