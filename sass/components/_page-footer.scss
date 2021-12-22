@@ -76,12 +76,11 @@
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
-  line-height: 1.143;
+  line-height: 1.714;
   letter-spacing: 0.02em;
   color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
   display: inline-block;
-  margin-top: 9px;
   transition: color $transition-time $transition-function;
 
   &:hover,
@@ -230,6 +229,11 @@
 }
 
 @media screen and (min-width: 1200px) {
+  .footer-style {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
   .wrap-cont {
     text-align: start;
   }
