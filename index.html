@@ -31,39 +31,26 @@
 
          <!-- Mobilу menu -->
 
-         <button
-          class="menu-button"
-          aria-expanded="false" type="button"
-          aria-controls="mobile-menu"
-          data-menu-open>
-            <svg
-              width="40"
-              height="40"
-              aria-label="Переключатель мобильного меню">
-              <use class="icon-menu" href="./images/icons.svg#menu"></use>
-            </svg>
-          </button>
-          </div>
+              <button
+                class="menu-button"
+                aria-expanded="false"
+                type="button"
+                aria-controls="mobile-menu"
+                data-menu-button
+              >
+                <svg
+                  width="40"
+                  height="40"
+                  aria-label="Переключатель мобильного меню"
+                > <use class="icon-cross" href="./images/icons.svg#cross"></use>
+                  <use class="icon-menu" href="./images/icons.svg#menu"></use>
+                </svg>
+              </button>
+            </div>
 
-          <div class="backdrop-menu is-hidden" data-menu>
-           <div class="mobile-menu">
+          <div class="mobile-menu" id="mobile-menu" data-menu>
 
-          <button type="button"
-          class="menu-close"
-          aria-expanded="false"
-          aria-controls="mobile-menu"
-           data-menu-close>
-            <svg
-              width="40"
-              height="40"
-              aria-label="Переключатель мобильного меню">
-              <use class="icon-cross" href="./images/icons.svg#cross"></use>
-            </svg>
-          </button>
-
-          <!--Меню мобильной навигации -->
-
-              <ul class="mobile-menu__list">
+           <ul class="mobile-menu__list">
             <li class="mobile-menu__item">
               <a class="mobile-menu__link active" href="./index.html">Студия</a>
 
@@ -91,14 +78,14 @@
               </li>
               </ul>
               <ul class="mobile-menu-social__list">
-                <li class="mobile-menu-social__item"> Instagram</li>
-                <li class="mobile-menu-social__item"> Twitter</li>
-                <li class="mobile-menu-social__item"> Facebook</li>
-                <li class="mobile-menu-social__item"> LinkedIn</li>
+                <li class="mobile-menu-social__item"> <a class="mobile-menu-social__link" href="" ></a>Instagram</li>
+                <li class="mobile-menu-social__item"> <a class="mobile-menu-social__link" href="" ></a>Twitter</li>
+                <li class="mobile-menu-social__item"> <a class="mobile-menu-social__link" href="" ></a>Facebook</li>
+                <li class="mobile-menu-social__item"> <a class="mobile-menu-social__link" href="" ></a>LinkedIn</li>
               </ul>
 
-            </div>
-            </div>
+          </div>
+
           <ul class="nav">
             <li class="nav__item">
               <a class="nav__link primary" href="./index.html">Студия</a>
@@ -714,7 +701,8 @@
         </form>
       </div>
     </div>
-    <script src="./js/mobile-menu.js"></script>
+    <!-- <script src="./js/mobile-menu.js"></script> -->
+    <script src="./js/menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>
