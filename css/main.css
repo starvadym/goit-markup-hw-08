@@ -577,7 +577,7 @@ body {
 
 .team-cont {
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 24px;
   padding-left: 32px;
   padding-right: 32px;
 }
@@ -607,6 +607,9 @@ body {
   .team-list {
     display: flex;
     flex-wrap: nowrap;
+  }
+  .team-cont {
+    padding-bottom: 30px;
   }
   .team__title {
     margin-bottom: 50px;
